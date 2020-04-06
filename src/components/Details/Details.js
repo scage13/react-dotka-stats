@@ -1,5 +1,5 @@
-import {chain, filter, map} from "lodash-es";
 import React from 'react';
+import {map} from "lodash-es";
 import './Details.sass';
 
 const icon = {
@@ -11,10 +11,8 @@ const icon = {
 export const Details = ({ hero }) => {
   if (!hero) { return null; }
   const getStats = prop => {
-    return chain(hero, { map, filter })
-      .map((value, key) => key.includes(prop) ? { key: key.replace(prop, '').replace('_', ' '), value } : null)
+    return map(hero, (value, key) => key.includes(prop) ? { key: key.replace(prop, '').replace('_', ' '), value } : null)
       .filter(item => item)
-      .value()
   };
 
   return (

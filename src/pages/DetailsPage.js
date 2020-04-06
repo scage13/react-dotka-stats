@@ -4,7 +4,6 @@ import {Loading} from "../components/Loading/Loading";
 import {Details} from "../components/Details/Details";
 
 export const DetailsPage = ({ match }) => {
-  // const name = match.params.name;
   const {getHeroDetails, hero, loading} = useContext(HeroesContext);
 
   useEffect(() => {

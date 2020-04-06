@@ -9,7 +9,6 @@ const handlers = {
 };
 
 const remapHeroes = ({data, term}) => {
-  // agi str int - primary_attr, localized_name
   let heroes = data;
   if (term) {
     heroes = heroes.filter(hero => {
